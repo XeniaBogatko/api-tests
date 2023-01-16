@@ -1,9 +1,9 @@
-package models.lombok;
+package models;
 
 import lombok.Data;
 
 @Data
-public class UserCretionResponseModel {
+public class UserCreationResponseModel {
 
     private String name, job, id, createdAt;
 }
