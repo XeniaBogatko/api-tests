@@ -1,6 +1,6 @@
 # Test automation project for [reqres.in](https://reqres.in/)
 
-##	Content
+##	Table of Contents
 
 - [Technologies and tools](#technologist-technologies-and-tools)
 - [Implemented checks](#bookmark_tabs-implemented-checks)
@@ -39,7 +39,7 @@ gradle clean test
 
 ## <img width="4%" title="Jenkins" src="media/logo/Jenkins.svg"> Running tests in [Jenkins](https://jenkins.autotests.cloud/job/xenia_api_tests/)
 
-Click the button <code><strong>*Collect*</strong></code> to start the build.
+Click the button <code><strong>*Collect Now*</strong></code> to start the build.
 
 <p align="center">
   <img src="media/jenkins.png" alt="Jenkins" width="800">

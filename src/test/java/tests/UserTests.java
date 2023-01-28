@@ -1,7 +1,7 @@
 package tests;
 
-import models.UserCreationModel;
-import models.UserCreationResponseModel;
+import models.CreateUserModel;
+import models.CreateUserResponseModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +19,7 @@ import static specs.GetUserSpecs.getUserResponseSpec;
 import static specs.NotFoundUserSpecs.notFoundUserRequestSpec;
 import static specs.NotFoundUserSpecs.notFoundUserResponseSpec;
 
-public class RestTests {
+public class UserTests {
     @Test
     @DisplayName("Get an user by id number")
     void getSingleUser() {
@@ -47,18 +47,18 @@ public class RestTests {
     @Test
     @DisplayName("Check that user is created with correct data")
     void createUser() {
-        UserCreationModel userModel = new UserCreationModel();
+        CreateUserModel userModel = new CreateUserModel();
         userModel.setJob("leader");
         userModel.setName("morpheus");
 
-        UserCreationResponseModel responseModel = given()
+        CreateUserResponseModel responseModel = given()
                 .spec(createUserRequestSpec)
                 .body(userModel)
                 .when()
                 .post()
                 .then()
                 .spec(createUserResponseSpec)
-                .extract().as(UserCreationResponseModel.class);
+                .extract().as(CreateUserResponseModel.class);
 
         assertThat(responseModel.getJob()).isEqualTo("leader");
         assertThat(responseModel.getName()).isEqualTo("morpheus");
